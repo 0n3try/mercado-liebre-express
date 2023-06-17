@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* Header */
+
+header {
+    background-color: #EAC926;
+}
+
+header nav {
+    display: none;
+}
+
+header p {
+    text-align: center;
+}
+
+
+header nav ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+header nav ul li  {
+    list-style-type: none;
+}
+
+header nav ul {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 42%;
+    
+}
+
+
+header .buscador .input {
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: #666;
+    padding: 5px;
+    font-size: 10px;
+    width: 35vw;
+    height: 4vh;
+}
+
+header .buscador .lupa i {
+    background-color: #fff;
+    color: #666;
+    margin-left: -20px;
+}
+
+
+header .burger-menu i {
+    color: #fff;
+    background-color: #1259C3;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+}
+
+
+.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.logo {
+    width: 50%;
+    padding: 10px;
+}
+
+.buscador {
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.burger-menu {
+    text-align: center;
+}
+
+/* Header */
+
+/* Section */
+
+.banner-img {
+    width: 100vw;
+}
+
+
+/* Main */
+
+
+main {
+    width: 90vw;
+    margin: auto;
+}
+
+main section {
+    margin: 10px 0;
+}
+
+main section article {
+    margin-bottom: 10px;
+    transition: all 0.3s ;
+    padding: 10px;
+}
+
+
+main section h3 {
+    color: #666;
+    margin: 10px;
+}
+
+
+main section article div i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    color: #39b54a;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+
+
+
+.productos article img {
+    width: 100%;
+}
+
+.info-article {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.precio {
+    width: 50%;
+}
+
+.descuento {
+    width: 50%;
+}
+
+
+
+/* Footer */
+
+footer {
+    margin-top: 10px ;
+}
+
+footer section {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+}
+
+
+footer section i {
+    color:#1259C3;
+    font-size: 30px;
+    
+}
+
+footer article p {
+    font-size: 16px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Formulario */
+
+.formulario-registro {
+    background-color: #ebebeb;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.formularios {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form div {
+    margin-bottom: 10px;
+    border-radius: 5%;
+
+}
+
+.text-field {
+    padding: 5px;
+    width: 50vw;
+}
+
+.perfil {
+    display: flex;
+}
+
+.perfil div {
+    margin:  0 5px;
+}
+
+.selecciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.botonForm {
+    width: 40%;
+    color: #FFF;
+    transition: all 0.6s;
+    border-radius: 5px;
+    height: 5vh;
+    margin: 5px;
+
+}
+
+.botonForm:hover {
+    transition: 0.7s;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.botonSubmit {
+    background-color: #1259C3;
+    border: 1px solid #1259C3;
+    
+}
+
+
+
+.botonReset {
+    background-color: red;
+    border: 1px solid red;
+}
+
+
+.form-login {
+    height: 70vh;
+}
+ 
+/* Media */
+
+@media (min-width: 361px) {
+    .top-header {
+        align-items: center;
+    }
+
+    .desc-prod {
+        display: block;
+    }
+
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    main section article {
+        width: 45%;
+
+    }
+
+    main section article p {
+        font-size: 10px
+    }
+
+
+
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        margin: 10px;
+    }
+    
+
+    header .burger-menu {
+        display: none;
+    }
+
+   
+    .formulario-registro {
+        width: 70%;
+    }
+
+    
+    
+}
+
+@media (min-width: 769px) {
+
+   
+
+    main section article {
+        width: 22.5%;
+    }
+
+    .top-header {
+        justify-content: space-around;
+        padding: 0%;
+        flex-wrap: nowrap;
+    }
+
+    .buscador {
+        width: 20%;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .productos div p {
+        font-size: 12px;
+    }
+
+    .text-field {
+        width: 500px;
+    }
+
+    .formulario-registro {
+        width: 100%;
+    }
+
+    .desc-prod {
+        display: none;
+    }
+
+    .botonForm {
+        width: 500px;
+    }
+
+    article:hover .desc-prod {
+        display: inline;
+        transition: all 0.5s;
+    }
+
+    article:hover {
+        box-shadow: 0  0 10px rgb(100, 100, 100);
+    }
+
+    article:hover i { 
+        transform: rotate(-90deg);
+        transition: all 0.6s;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+
+
+    
+
+    
+
+
+}
