@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "alvaro Sosa",
+    "username": "0n3try",
+    "fechaDeNacimiento": "16/05/2000",
+    "email": "alva1432@gmail.com",
+    "domicilio": "calle false 123",
+    "tipoDePerfil": "vendedor",
+    "intereses": "on",
+    "image": "default-image.png",
+    "password": "1234"
+  },
+  {
+    "id": 2,
+    "name": "hola",
+    "username": "como ",
+    "fechaDeNacimiento": "2233-03-12",
+    "email": "aa34343@x.com",
+    "domicilio": "22334",
+    "tipoDePerfil": "Comprador",
+    "image": "img-bicicleta-fierce.jpg",
+    "password": "asdasdasd"
+  },
+  {
+    "id": 3,
+    "name": "maria",
+    "username": "asdaf",
+    "fechaDeNacimiento": "2929-09-12",
+    "email": "maria@gmail.com",
+    "domicilio": "asdka213",
+    "tipoDePerfil": "Vendedor",
+    "intereses": "Moda",
+    "image": "img-camara-nikon.jpg",
+    "password": "asdasd"
+  }
+]
