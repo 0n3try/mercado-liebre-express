@@ -1,15 +1,17 @@
 [
   {
     "id": 1,
-    "name": "alvaro Sosa",
-    "username": "0n3try",
-    "fechaDeNacimiento": "16/05/2000",
+    "name": "Hola aasda",
+    "username": "asdq3213",
+    "fechaDeNacimiento": "",
     "email": "alva1432@gmail.com",
     "domicilio": "calle false 123",
-    "tipoDePerfil": "vendedor",
-    "intereses": "on",
-    "image": "default-image.png",
-    "password": "1234"
+    "tipoDePerfil": "Vendedor",
+    "intereses": "Electro",
+    "image": "431960_screenshots_wallpaperbetter.com_3840x2160(27) - Kopie.jpg",
+    "password": "",
+    "borrado": true,
+    "PasswordConfirm": ""
   },
   {
     "id": 2,

@@ -26,6 +26,30 @@ const userController = {
         }
         fs.writeFileSync(path.resolve(__dirname,'../database/user.json'),JSON.stringify([...datos,user], null, 2));
         return res.redirect('/')
+    },
+    editar: (req,res) => {
+        const usuario = datos.find((row) => row.id == req.params.id);
+        return res.render('editar', {usuario: usuario});
+    },
+    processEdit: (req,res) => {
+        const usuario = datos.find((row) => row.id == req.params.id);
+        for(let propiedad in req.body) {
+            usuario[propiedad] = req.body[propiedad];
+        };
+        fs.writeFileSync(path.resolve(__dirname,'../database/user.json'),JSON.stringify(datos, null, 2));
+        return res.redirect('/');
+    
+    },
+    perfil: (req,res) => {
+        const usuario = datos.find((row) => row.id == req.params.id);
+        console.log(usuario)
+        return res.render('perfil', {usuario: usuario});
+    },
+    eliminar: (req,res) => {
+        const usuario = datos.find((row) => row.id == req.params.id);
+        usuario.borrado = true;
+        fs.writeFileSync(path.resolve(__dirname,'../database/user.json'),JSON.stringify(datos, null, 2));
+        return res.redirect('/')
     }
     
 }
