@@ -11,7 +11,8 @@
     "image": "431960_screenshots_wallpaperbetter.com_3840x2160(27) - Kopie.jpg",
     "password": "",
     "borrado": true,
-    "PasswordConfirm": ""
+    "PasswordConfirm": "",
+    "loggeado": true
   },
   {
     "id": 2,
@@ -22,7 +23,8 @@
     "domicilio": "22334",
     "tipoDePerfil": "Comprador",
     "image": "img-bicicleta-fierce.jpg",
-    "password": "asdasdasd"
+    "password": "asdasdasd",
+    "loggeado": false
   },
   {
     "id": 3,
@@ -34,6 +36,7 @@
     "tipoDePerfil": "Vendedor",
     "intereses": "Moda",
     "image": "img-camara-nikon.jpg",
-    "password": "asdasd"
+    "password": "asdasd",
+    "loggeado": true
   }
 ]
