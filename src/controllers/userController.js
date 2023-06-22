@@ -3,6 +3,7 @@ const path = require('path')
 
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/user.json')));
 
+const { validationResult } = require("express-validator");
 
 const userController = {
     login: (req, res) => {
@@ -29,6 +30,15 @@ const userController = {
             "image": req.body.Fotoperfil,
             "password": req.body.password
         }
+
+        // Guarda un obj literal con la propiedad errors
+        const rdoValidacion = validationResult(req)
+        console.log(rdoValidacion.errors)
+
+        if(rdoValidacion.errors.length > 0) {
+            return res.render('register', { errors: rdoValidacion.mapped(), oldData: req.body })
+        }
+
         fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
         return res.redirect('/')
     },

@@ -6,6 +6,7 @@ const path = require('path');
 
 const logMiddleware = require('../middlewares/logMiddleware');
 
+const registerValidation = require('../middlewares/registerValidation');
 
 const multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -26,7 +27,7 @@ const fileUpload = multer({
 
 router.get('/login', userController.login);
 router.get('/register', userController.register);
-router.post('/register', userController.processRegister)
+router.post('/register', registerValidation, userController.processRegister)
 
 //* Edicion de usuario 
 router.get('/editar/:id', userController.editar);

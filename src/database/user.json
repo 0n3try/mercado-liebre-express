@@ -38,5 +38,15 @@
     "image": "img-camara-nikon.jpg",
     "password": "asdasd",
     "loggeado": true
+  },
+  {
+    "id": 4,
+    "name": "",
+    "username": "",
+    "fechaDeNacimiento": "",
+    "email": "",
+    "domicilio": "",
+    "image": "",
+    "password": ""
   }
 ]
