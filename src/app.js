@@ -5,9 +5,21 @@ const mainRoutes = require('./routes/mainRoutes');
 const userRouter = require('./routes/userRoutes');
 const methodOverride = require('method-override');
 const logs = require('./middlewares/logs')
-
+const session = require('express-session')
+const cookie = require('cookie-parser')
+const cookieExiste = require('./middlewares/cookieMiddleware')
 
 app.use(express.static('public'));
+
+app.use(cookie())
+
+app.use(session({
+    secret: "mi secreto",
+    resave: false,
+    saveUninitialized: false,
+}))
+
+app.use(cookieExiste)
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

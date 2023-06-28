@@ -12,14 +12,21 @@
 
     <main class="formulario-registro">
 
-        <form action="/" method="get" class="formularios form-login">
+        <form action="/user/login" method="post" class="formularios form-login">
             <div>
-                <input type="text" class="text-field" placeholder="Nombre de Usuario" name="user" id="user">
+                <input type="text" class="text-field" placeholder="Email" name="email" id="email">
             </div>
             <div>
                 <input class="text-field" type="password" placeholder="Elegi tu constrasena" name="password"
                     id="password">
             </div>
+            <div>
+                <label for="cookie">Recordarme</label>
+                <input class="" type="checkbox"  name="cookie" id="cookie">
+            </div>
+            <% if(locals.errors && errors.datosMal) { %>
+                <p> <%= errors.datosMal.msg %> </p>
+                <% } %>
             <button class="botonForm botonSubmit" type="submit">Login</button>
 
         </form>

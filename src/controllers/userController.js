@@ -10,6 +10,37 @@ const userController = {
         return res.render('login');
     },
 
+    processLogin: (req, res) => {
+        const usuario = datos.find((row) => row.email == req.body.email);
+        if (usuario) {
+            console.log("usuario encontrado")
+            if (usuario.password == req.body.password){
+                delete usuario.password
+                req.session.usuarioLogeado = usuario
+                console.log("contraseña correcta")
+                if (req.body.cookie){
+                    res.cookie("recordame", usuario.email, {maxAge: 1000*60*60})
+                }
+                return res.redirect('/user/perfil')
+            }else{
+                return res.render('login', {
+                    errors: {
+                        datosMal: {
+                            msg: "Datos Incorrectos"
+                        }
+                    }
+                })
+            }
+        }else{
+            return res.render('login', {
+                errors: {
+                    datosMal: {
+                        msg: "Datos Incorrectos"
+                    }
+                }
+            })
+        }
+    },
 
     register: (req, res) => {
         return res.render('register');
@@ -65,7 +96,7 @@ const userController = {
 
 
     perfil: (req, res) => {
-        const usuario = datos.find((row) => row.id == req.params.id);
+        const usuario = req.session.usuarioLogeado;
         console.log(usuario)
         return res.render('perfil', { usuario: usuario });
     },

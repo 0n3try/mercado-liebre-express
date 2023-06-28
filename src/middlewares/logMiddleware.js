@@ -1,21 +1,10 @@
-const fs = require('fs');
-const path = require('path')
-
-const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/user.json')));
-
-
-
 
 const logMiddleware = (req, res, next) => {
-  const usuario = datos.find((row) => row.id == req.params.id);
-
-  if (usuario.loggeado == true) {
-    next();
-  } else {
+  if (!req.session.usuarioLogeado ) {
     return res.redirect('/user/login')
+  } else {
+    next();  
   }
-
-
 }
 
 

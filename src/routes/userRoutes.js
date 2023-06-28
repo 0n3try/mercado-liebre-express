@@ -26,13 +26,14 @@ const fileUpload = multer({
 
 
 router.get('/login', userController.login);
+router.post('/login', userController.processLogin);
 router.get('/register', userController.register);
 router.post('/register', registerValidation, userController.processRegister)
 
 //* Edicion de usuario 
 router.get('/editar/:id', userController.editar);
 router.put('/editar/:id', fileUpload.single('image'), userController.processEdit)
-router.get('/perfil/:id', logMiddleware, userController.perfil);
+router.get('/perfil', logMiddleware, userController.perfil);
 
 
 //!  Eliminar usuario
